@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+     <div class="container">
+    <h1>Добро пожаловать на главную страницу!</h1>
+    <p>Сервис по работе с МТР (М-29, КС-2)</p>
+
+    <!-- Форма для загрузки файла М-29 -->
+    <div class="upload-form">
+        <label for="file-upload-m29">Загрузить файл М-29</label>
+        <input id="file-upload-m29" type="file" onchange="uploadM29()">
+    </div>
+
+    <!-- Выбор листа М-29 -->
+    <div id="sheet-selection-m29" style="display: none;">
+        <label for="sheet-name-m29">Выберите лист М-29:</label>
+        <select id="sheet-name-m29"></select>
+    </div>
+
+    <!-- Форма для загрузки файла КС-2 -->
+    <div class="upload-form">
+        <label for="file-upload-ks2">Загрузить файл КС-2</label>
+        <input id="file-upload-ks2" type="file" onchange="uploadKs2()">
+    </div>
+
+         <!-- Выбор листа КС-2 -->
+    <div id="sheet-selection-ks2" style="display: none;">
+        <label for="sheet-name-ks2">Выберите лист КС-2:</label>
+        <select id="sheet-name-ks2"></select>
+    </div>
+
+    <!-- Поле для ввода added_int -->
+    <div class="input-field">
+        <label for="added-int">Кол-во столбцов между №МТР и количеством в КС-2:</label>
+        <input type="number" id="added-int" value="1">
+    </div>
+
+    <!-- Форма для загрузки файла SAP -->
+    <div class="upload-form">
+        <label for="file-upload-sap">Загрузить файл SAP</label>
+        <input id="file-upload-sap" type="file" onchange="uploadSap()">
+    </div>
+
+    <!-- Поле для ввода mtr_mask -->
+    <div class="input-field">
+        <label for="mtr-mask">Маска для поиска (через запятую):</label>
+        <input type="text" id="mtr-mask" value="77000, 78000">
+    </div>
+
+    <!-- Кнопки для выполнения действий -->
+    <button class="button" onclick="unwrapM29()">Распаковать М-29</button>
+    <button class="button" onclick="compareM29Ks2()">Сравнить М-29 и КС-2</button>
+    <button class="button" onclick="compareM29Sap()">Сравнить М-29 и SAP</button>
+
+    <!-- Сообщение -->
+    <div id="message" class="message"></div>
+</div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

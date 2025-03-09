@@ -1,0 +1,131 @@
+/* Основные стили для body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Контейнер */
+.container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+}
+
+/* Заголовок */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Параграф */
+p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Кнопки */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0.5rem;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Формы загрузки файлов */
+.upload-form {
+    margin: 1rem 0;
+}
+
+.upload-form label {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.upload-form label:hover {
+    background-color: #218838;
+}
+
+.upload-form input[type="file"] {
+    display: none;
+}
+
+/* Выбор листа */
+#sheet-selection-m29, #sheet-selection-ks2 {
+    margin: 1rem 0;
+}
+
+#sheet-selection-m29 label, #sheet-selection-ks2 label {
+    font-size: 1rem;
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+#sheet-name-m29, #sheet-name-ks2 {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Поле для ввода added_int */
+.input-field {
+    margin: 1rem 0;
+}
+
+.input-field label {
+    font-size: 1rem;
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+.input-field input[type="number"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Сообщение */
+.message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #333;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
